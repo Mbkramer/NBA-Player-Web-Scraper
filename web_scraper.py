@@ -156,7 +156,7 @@ def main():
         print("To get a csv of all NBA players type CSV.")
         print("Leave the program by typing EXIT\n")
         
-        user_input = input("\nEnter your colmmand: ").lower()
+        user_input = input("\nEnter your command: ").lower()
 
         if user_input == "search":
             get_player_web_data()
