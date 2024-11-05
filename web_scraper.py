@@ -1,4 +1,4 @@
-# NBA player websraper
+# NBA player webscraper
 # By Max Kramer
 # DATE: 11/01/2024
 # Description: Scrape basic player data for all NBA players to from NBA reference.com
@@ -68,20 +68,6 @@ def get_player_web_data():
         with open("WEB_HTML/{}.html".format(letter), "w+") as f:
             f.write(result.text)
 
-#csv of all name players
-def get_player_csv_data(path):
-
-    player_list = []
-
-    with open(path) as page:
-
-        reader_obj = csv.reader(page)
-
-        for row in reader_obj: 
-            player_list.append(nba_player(row[0], row[8], row[1], row[2], row[3], row[4], row[5], row[6], row[7]))
-
-    all_nba_players.append(player_list)
-
 def innit_players():
     
     #TODO find a way to not hardcode this? currently no players with x last name but that could change
@@ -132,7 +118,7 @@ def convert_all_nba_players_to_csv():
                     f.write(player.print())
 
 ################################################################################################
-# Prints
+# Print all_nba_player_list information
 ################################################################################################
 
 # Now it just prints the all_nba_player list ;)
